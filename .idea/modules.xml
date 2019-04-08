@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/dirty-web-hooker.iml" filepath="$PROJECT_DIR$/.idea/dirty-web-hooker.iml" />
       <module fileurl="file://$PROJECT_DIR$/dirty-web-hooker.iml" filepath="$PROJECT_DIR$/dirty-web-hooker.iml" />
     </modules>
   </component>
