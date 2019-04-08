@@ -1,20 +1,23 @@
 var express = require('express');
-var bodyParser = require('body-parser');
+var multer = require('multer');
+var request = require('request');
+
+var upload = multer({dest: '/tmp/'});
 var app = express();
 
-app.use(bodyParser.json());
-
-app.post('/', function (req, res) {
+app.post('/', upload.single('thumb'), function (req, res, next) {
     var contype = req.headers['content-type'];
-    console.log(contype);
+    var event = '';
+    var body = {};
 
-    var body = req.body;
+    if (contype.includes('multipart/form-data')) {
+        console.log('Detected Multipart Form Data');
+        body = JSON.parse(req.body.payload);
+        event = body.event;
+    }
 
-    // This doesn't work with plex webhooks (mostly) due to them being multipart, rather than json.  Need to find a new body parser that can handle multipart.
-    var event = body.event;
-
-    console.log('Received Webhook');
-    console.log(event);
+    console.log('Detected Event:  ' + event);
+    console.log('Got Body:  ' + body);
 
     res.json({
         message: 'ack'

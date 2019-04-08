@@ -1,0 +1,25 @@
+{
+  "name": "dirty-web-hooker",
+  "version": "0.0.1",
+  "description": "Provide simple filtering of plex webhooks.",
+  "main": "app.js",
+  "dependencies": {
+    "express": "^4.16.4",
+    "multer": "^1.4.1",
+    "request": "^2.88.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/triestelaporte/dirty-web-hooker.git"
+  },
+  "author": "triestelaporte",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/triestelaporte/dirty-web-hooker/issues"
+  },
+  "homepage": "https://github.com/triestelaporte/dirty-web-hooker#readme"
+}
